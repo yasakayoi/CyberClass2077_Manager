@@ -6,7 +6,7 @@
     <string name="title_scoiacl">动态</string>
     <string name="title_user">我</string>
 
-    <string-array name="tag">
+    <string-array name="course_tag">
         <item>标签1</item>
         <item>标签2</item>
         <item>标签3</item>
@@ -21,10 +21,16 @@
         <item name = "woman">女</item>
     </string-array>
 
-    <string-array name="user_stats_tag">
+    <string-array name="user_status_tag">
         <item name = "default">正常</item>
         <item name = "banned">禁言</item>
         <item name = "delete">封号</item>
+    </string-array>
+
+    <string-array name="course_status_tag">
+        <item>待审核</item>
+        <item>已审核</item>
+        <item>删除</item>
     </string-array>
 
 </resources>

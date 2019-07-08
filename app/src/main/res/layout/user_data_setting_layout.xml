@@ -273,7 +273,7 @@
             android:layout_gravity="center"
             android:layout_marginRight="50dp"
             android:layout_marginLeft="50dp"
-            android:entries="@array/user_stats_tag">
+            android:entries="@array/user_status_tag">
         </Spinner>
     </LinearLayout>
     <View
