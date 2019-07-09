@@ -60,10 +60,10 @@
 
         <TextView
             android:id="@+id/course_remark"
-            android:layout_width="124dp"
-            android:layout_height="49dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@color/qmui_config_color_50_blue"
-            android:text="视频标签"
+            android:text="标签"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/course_video_title"
