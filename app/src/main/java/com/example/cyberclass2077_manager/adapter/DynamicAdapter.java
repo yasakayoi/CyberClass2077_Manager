@@ -88,6 +88,13 @@ public class DynamicAdapter extends BaseAdapter {
             }
         });
 
+        viewHolderGroup.img_head.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // Intent intent1 = new Intent(context,)//更改用户信息activity
+            }
+        });
+
         //关注
         viewHolderGroup.img_favorite.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,24 +7,24 @@
     <string name="title_user">我</string>
 
     <string-array name="course_tag">
-        <item name = "literary">文学</item>
-        <item name = "language">语言</item>
-        <item name = "physics">物理</item>
-        <item name = "program">编程</item>
-        <item name = "music">音乐</item>
-        <item name = "math">数学</item>
+        <item name="literary">文学</item>
+        <item name="language">语言</item>
+        <item name="physics">物理</item>
+        <item name="program">编程</item>
+        <item name="music">音乐</item>
+        <item name="math">数学</item>
     </string-array>
 
     <string-array name="tag_gender">
-        <item name = "default">保密</item>
-        <item name = "man">男</item>
-        <item name = "woman">女</item>
+        <item name="default">保密</item>
+        <item name="man">男</item>
+        <item name="woman">女</item>
     </string-array>
 
     <string-array name="user_status_tag">
-        <item name = "default">正常</item>
-        <item name = "banned">禁言</item>
-        <item name = "delete">封号</item>
+        <item name="default">正常</item>
+        <item name="banned">禁言</item>
+        <item name="delete">封号</item>
     </string-array>
 
     <string-array name="course_status_tag">
