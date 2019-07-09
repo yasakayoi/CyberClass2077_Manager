@@ -10,9 +10,12 @@ import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.cyberclass2077_manager.Adapter.CourseAdapter;
 import com.example.cyberclass2077_manager.Adapter.MutiChoiceAdapter;
+import com.example.cyberclass2077_manager.Bean.CourseBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +41,23 @@ public class Fragment1 extends Fragment {
             }
 
         });
+
+        //初始化list
+        ListView listView=view.findViewById(R.id.course_list);
+        List<CourseBean> courseBeanList=new ArrayList<>();
+        for(int i=0;i<10;i++)
+        {
+            courseBeanList.add(new CourseBean());
+        }
+
+        CourseAdapter courseAdapter=new CourseAdapter(view.getContext(),courseBeanList);
+        listView.setAdapter(courseAdapter);
+
+
+
+
+
+
         return view;
     }
     @Override
