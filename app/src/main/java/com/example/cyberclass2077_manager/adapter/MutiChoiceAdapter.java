@@ -1,4 +1,4 @@
-package com.example.cyberclass2077_manager.Adapter;
+package com.example.cyberclass2077_manager.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

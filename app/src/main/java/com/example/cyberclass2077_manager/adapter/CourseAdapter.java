@@ -1,4 +1,4 @@
-package com.example.cyberclass2077_manager.Adapter;
+package com.example.cyberclass2077_manager.adapter;
 
 
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.cyberclass2077_manager.Bean.CourseBean;
+import com.example.cyberclass2077_manager.bean.CourseBean;
 import com.example.cyberclass2077_manager.R;
 import com.example.cyberclass2077_manager.controllers.CircleImageView;
 

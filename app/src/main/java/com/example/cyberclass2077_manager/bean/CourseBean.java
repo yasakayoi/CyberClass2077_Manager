@@ -1,4 +1,4 @@
-package com.example.cyberclass2077_manager.Bean;
+package com.example.cyberclass2077_manager.bean;
 
 public class CourseBean {
     private String videoPath;
