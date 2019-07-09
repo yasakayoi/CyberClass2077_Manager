@@ -7,12 +7,12 @@
     <string name="title_user">我</string>
 
     <string-array name="course_tag">
-        <item>标签1</item>
-        <item>标签2</item>
-        <item>标签3</item>
-        <item>标签4</item>
-        <item>标签5</item>
-        <item>标签6</item>
+        <item name = "literary">文学</item>
+        <item name = "language">语言</item>
+        <item name = "physics">物理</item>
+        <item name = "program">编程</item>
+        <item name = "music">音乐</item>
+        <item name = "math">数学</item>
     </string-array>
 
     <string-array name="tag_gender">
@@ -29,7 +29,7 @@
 
     <string-array name="course_status_tag">
         <item>待审核</item>
-        <item>已审核</item>
+        <item>审核通过</item>
         <item>删除</item>
     </string-array>
 
