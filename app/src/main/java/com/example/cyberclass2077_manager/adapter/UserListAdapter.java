@@ -91,6 +91,7 @@ public class UserListAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ChangeUserInfoActivity.class);
+                intent.putExtra("back_fragment",2);
                 context.startActivity(intent);
             }
         });

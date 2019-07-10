@@ -11,6 +11,7 @@ public class ChangeUserInfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+       final Intent intent = getIntent();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_data_setting_layout);
         img_back_btn = (ImageButton)findViewById(R.id.btn_dataSetting_back);
@@ -19,10 +20,19 @@ public class ChangeUserInfoActivity extends AppCompatActivity {
         img_back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChangeUserInfoActivity.this,Fragment3CheckAccountlistActivity.class);
-                intent.putExtra("fragment",2);
+                int i = intent.getIntExtra("back_fragment",1);
                 finish();
-                startActivity(intent);
+                if(i==2)
+                {
+                    Intent intent2 = new Intent(ChangeUserInfoActivity.this,Fragment3CheckAccountlistActivity.class);
+                    startActivity(intent2);
+                }
+                else
+                {
+                    Intent intent2 = new Intent(ChangeUserInfoActivity.this,MainActivity.class);
+                    intent2.putExtra("fragment",1);
+                    startActivity(intent2);
+                }
             }
         });
     }

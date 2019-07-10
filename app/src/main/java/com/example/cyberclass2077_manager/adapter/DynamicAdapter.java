@@ -85,16 +85,37 @@ public class DynamicAdapter extends BaseAdapter {
             public void onClick(View v) {
                // Intent intent1 = new Intent(context,)//更改用户信息activity
                 Intent intent = new Intent(context, ChangeUserInfoActivity.class);
+                intent.putExtra("back_fragment",1);
                 context.startActivity(intent);
             }
         });
 
         switch (position){
-            case 0: break;
-            
-            case 1: break;
+            case 0:
+                viewHolderGroup.img_head.setImageResource(R.drawable.lee);
+                viewHolderGroup.str_user_name.setText("坦克人");
+                viewHolderGroup.img_dis.setImageResource(R.drawable.knn);
+                viewHolderGroup.str_describe.setText("冲冲冲");
+                viewHolderGroup.int_amount_favorite.setText("1,024 赞");
+                viewHolderGroup.str_time.setText("2019-07-10");
+                break;
+            case 1:
+                viewHolderGroup.img_head.setImageResource(R.drawable.lee);
+                viewHolderGroup.str_user_name.setText("坦克人");
+                viewHolderGroup.img_dis.setImageResource(R.drawable.male);
+                viewHolderGroup.str_describe.setText("冲冲冲");
+                viewHolderGroup.int_amount_favorite.setText("1,024 赞");
+                viewHolderGroup.str_time.setText("2019-07-10");
+                break;
 
-            case 2: break;
+            case 2:
+                viewHolderGroup.img_head.setImageResource(R.drawable.lee);
+                viewHolderGroup.str_user_name.setText("坦克人");
+                viewHolderGroup.img_dis.setImageResource(R.drawable.male);
+                viewHolderGroup.str_describe.setText("冲冲冲");
+                viewHolderGroup.int_amount_favorite.setText("1,024 赞");
+                viewHolderGroup.str_time.setText("2019-07-10");
+                break;
 
             default: break;
         }
