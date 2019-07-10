@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cyberclass2077_manager.ChangeUserInfoActivity;
 import com.example.cyberclass2077_manager.R;
 import com.example.cyberclass2077_manager.bean.DynamicBean;
 import com.example.cyberclass2077_manager.comment.DetailComment;
@@ -60,8 +61,6 @@ public class DynamicAdapter extends BaseAdapter {
             viewHolderGroup.str_describe=convertView.findViewById(R.id.id_describe);
             viewHolderGroup.img_dis=convertView.findViewById(R.id.id_list_img);
             viewHolderGroup.int_amount_favorite=convertView.findViewById(R.id.id_amount_favorite);
-            viewHolderGroup.str_first_comemnt=convertView.findViewById(R.id.id_first_comment);
-            viewHolderGroup.int_amout_comment=convertView.findViewById(R.id.id_amount_comment);
             viewHolderGroup.str_time=convertView.findViewById(R.id.id_time_publish);
             viewHolderGroup.img_favorite=convertView.findViewById(R.id.id_favorite);
             viewHolderGroup.img_chat=convertView.findViewById(R.id.id_chat);
@@ -80,48 +79,26 @@ public class DynamicAdapter extends BaseAdapter {
                 Log.e("expand", "onClick: " );
             }
         });
-        viewHolderGroup.str_first_comemnt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1=new Intent(context, DetailComment.class);
-                context.startActivity(intent1);
-            }
-        });
 
         viewHolderGroup.img_head.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                // Intent intent1 = new Intent(context,)//更改用户信息activity
+                Intent intent = new Intent(context, ChangeUserInfoActivity.class);
+                context.startActivity(intent);
             }
         });
 
-        //关注
-        viewHolderGroup.img_favorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(listDynamicBean.get(position).getIsLike()){
-                    listDynamicBean.get(position).setIsLike(false);
-                    viewHolderGroup.img_favorite.setColorFilter(Color.parseColor("#aaaaaa"));
-//                    listDynamicBean.get(position).setInt_amount_favorite();
+        switch (position){
+            case 0: break;
+            
+            case 1: break;
 
-                }else {
-                    listDynamicBean.get(position).setIsLike(true);
-                    viewHolderGroup.img_favorite.setColorFilter(Color.parseColor("#FF5C5C"));
-                }
-            }
-        });
-        if(listDynamicBean.get(position).getIsLike())
-        {
-            viewHolderGroup.img_favorite.setColorFilter(Color.parseColor("#FF5C5C"));
-        }
-        else
-        {
-            viewHolderGroup.img_favorite.setColorFilter(Color.parseColor("#aaaaaa"));
+            case 2: break;
+
+            default: break;
         }
 
-        Integer int_amount_favorite=listDynamicBean.get(position).getInt_amount_favorite();
-        String str_amount_favorite=int_amount_favorite.toString();
-        viewHolderGroup.int_amount_favorite.setText(str_amount_favorite+"👍");
 
         return convertView;
     }
@@ -129,10 +106,8 @@ public class DynamicAdapter extends BaseAdapter {
         ImageView img_head;
         TextView str_user_name;
         ImageView img_dis;
-        TextView int_amout_comment;
         TextView str_describe;
         TextView int_amount_favorite;
-        TextView str_first_comemnt;
         TextView str_time;
         ImageView img_favorite;
         ImageView img_chat;

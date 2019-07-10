@@ -2,13 +2,16 @@ package com.example.cyberclass2077_manager.adapter;
 
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cyberclass2077_manager.bean.CourseBean;
 import com.example.cyberclass2077_manager.R;
@@ -22,11 +25,15 @@ public class CourseAdapter extends BaseAdapter {
     private List<CourseBean> listDynamicBean;
     private LayoutInflater inflater;
 
+
+    private String[] course_status_tag_content;
+
     public CourseAdapter(Context context, List<CourseBean> listDynamicBean)
     {
         this.context=context;
         this.listDynamicBean=listDynamicBean;
         this.inflater=LayoutInflater.from(context);
+        course_status_tag_content = context.getResources().getStringArray(R.array.course_status_tag);//绑定tag_content
     }
 
     @Override
@@ -62,10 +69,51 @@ public class CourseAdapter extends BaseAdapter {
             viewHolderGroup.txt_remark=convertView.findViewById(R.id.course_remark);
             viewHolderGroup.spinner=convertView.findViewById(R.id.course_status_spinner);
             viewHolderGroup.view_seperate=convertView.findViewById(R.id.course_view_seperate);
+            convertView.setTag(viewHolderGroup);
         }else
         {
             viewHolderGroup=(ViewHolderGroup)convertView.getTag();
         }
+
+        switch (position){
+
+            case 0:
+                viewHolderGroup.course_uploader.setImageResource(R.drawable.lee);
+                viewHolderGroup.txt_nick_name.setText("Lee");
+                viewHolderGroup.txt_remark.setText("编程");
+                viewHolderGroup.txt_video_title.setText("在线视频1");
+                viewHolderGroup.spinner.setSelection(0);
+                break;
+
+            case 1:
+                viewHolderGroup.course_uploader.setImageResource(R.drawable.lee);
+                viewHolderGroup.txt_nick_name.setText("Lee");
+                viewHolderGroup.txt_remark.setText("数学");
+                viewHolderGroup.txt_video_title.setText("在线视频2");
+                viewHolderGroup.spinner.setSelection(1);
+                break;
+
+            case 2:
+                viewHolderGroup.course_uploader.setImageResource(R.drawable.lee);
+                viewHolderGroup.txt_nick_name.setText("Lee");
+                viewHolderGroup.txt_remark.setText("文学");
+                viewHolderGroup.txt_video_title.setText("在线视频3");
+                viewHolderGroup.spinner.setSelection(2);
+                break;
+            default:
+                break;
+        }
+
+        viewHolderGroup.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(context,course_status_tag_content[position],Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
         return convertView;
     }
 

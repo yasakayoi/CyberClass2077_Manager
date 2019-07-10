@@ -47,7 +47,7 @@
             app:layout_constraintVertical_bias="0.19999999" />
 
         <TextView
-            android:id="@+id/followee_list_is_followee"
+            android:id="@+id/followee_list_is_banned"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

@@ -1,6 +1,7 @@
 package com.example.cyberclass2077_manager.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.cyberclass2077_manager.ChangeUserInfoActivity;
 import com.example.cyberclass2077_manager.R;
 import com.example.cyberclass2077_manager.bean.UserListBean;
 import com.example.cyberclass2077_manager.controllers.CircleImageView;
@@ -54,14 +56,47 @@ public class UserListAdapter extends BaseAdapter {
             viewHolderGroup.followee_image = convertView.findViewById(R.id.followee_list_user_image);
             viewHolderGroup.followee_nickname = convertView.findViewById(R.id.followee_list_nickname);
             viewHolderGroup.followee_sex = convertView.findViewById(R.id.followee_list_user_sex);
-            viewHolderGroup.followee_isfollow = convertView.findViewById(R.id.followee_list_is_followee);
-
-
-
+            viewHolderGroup.followee_isbanned = convertView.findViewById(R.id.followee_list_is_banned);
+            convertView.setTag(viewHolderGroup);
         }else
         {
             viewHolderGroup=(ViewHolderGroup)convertView.getTag();
         }
+
+        switch (position)
+        {
+            case 0:
+                viewHolderGroup.followee_image.setImageResource(R.drawable.lee);
+                viewHolderGroup.followee_nickname.setText("Lee");
+                viewHolderGroup.followee_sex.setImageResource(R.drawable.male);
+                viewHolderGroup.followee_isbanned.setText("禁言");
+                break;
+            case 1:
+                viewHolderGroup.followee_image.setImageResource(R.drawable.lee);
+                viewHolderGroup.followee_nickname.setText("Lee2");
+                viewHolderGroup.followee_sex.setImageResource(R.drawable.circle);
+                viewHolderGroup.followee_isbanned.setText("禁言");
+                break;
+            case 2:
+                viewHolderGroup.followee_image.setImageResource(R.drawable.lee);
+                viewHolderGroup.followee_nickname.setText("Lee3");
+                viewHolderGroup.followee_sex.setImageResource(R.drawable.male);
+                viewHolderGroup.followee_isbanned.setText("禁言");
+                break;
+            default:
+                break;
+        }
+
+        viewHolderGroup.followee_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ChangeUserInfoActivity.class);
+                context.startActivity(intent);
+            }
+        });
+
+
+
         return convertView;
     }
 
@@ -70,6 +105,6 @@ public class UserListAdapter extends BaseAdapter {
         CircleImageView followee_image;
         TextView followee_nickname;
         ImageView followee_sex;
-        TextView followee_isfollow;
+        TextView followee_isbanned;
     }
 }
