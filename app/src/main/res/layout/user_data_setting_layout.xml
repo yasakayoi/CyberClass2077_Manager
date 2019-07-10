@@ -227,6 +227,7 @@
             android:textSize="20sp"/>
 
         <EditText
+            android:id="@+id/user_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -235,7 +236,7 @@
             android:layout_marginLeft="50dp"
             android:textColor="#9F9FA0"
             android:textColorHint="#9F9FA0"
-            android:hint="重庆 - 重庆"/>
+            android:hint="@string/the_place"/>
     </LinearLayout>
 
     <View

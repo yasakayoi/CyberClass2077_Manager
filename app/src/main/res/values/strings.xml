@@ -22,8 +22,8 @@
     </string-array>
 
     <string-array name="user_status_tag">
-        <item name="banned">禁言</item>
         <item name="default">正常</item>
+        <item name="banned">禁言</item>
         <item name="delete">封号</item>
     </string-array>
 
@@ -32,5 +32,8 @@
         <item>审核通过</item>
         <item>删除</item>
     </string-array>
+
+
+    <string name="the_place">China</string>
 
 </resources>
