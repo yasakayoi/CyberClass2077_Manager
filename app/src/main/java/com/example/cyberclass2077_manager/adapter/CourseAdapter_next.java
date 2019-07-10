@@ -20,7 +20,7 @@ import com.example.cyberclass2077_manager.controllers.CircleImageView;
 import java.util.List;
 
 
-public class CourseAdapter extends BaseAdapter {
+public class CourseAdapter_next extends BaseAdapter {
     private Context context;
     private List<CourseBean> listDynamicBean;
     private LayoutInflater inflater;
@@ -28,7 +28,7 @@ public class CourseAdapter extends BaseAdapter {
 
     private String[] course_status_tag_content;
 
-    public CourseAdapter(Context context, List<CourseBean> listDynamicBean)
+    public CourseAdapter_next(Context context, List<CourseBean> listDynamicBean)
     {
         this.context=context;
         this.listDynamicBean=listDynamicBean;
@@ -83,7 +83,7 @@ public class CourseAdapter extends BaseAdapter {
                 viewHolderGroup.txt_nick_name.setText("Lee");
                 viewHolderGroup.txt_remark.setText("编程");
                 viewHolderGroup.txt_video_title.setText("基于多特征值的数据预测");
-                viewHolderGroup.spinner.setSelection(1);
+                viewHolderGroup.spinner.setSelection(0);
                 break;
 
             case 1:

@@ -48,7 +48,7 @@
         <TextView
             android:id="@+id/course_video_title"
             android:layout_width="208dp"
-            android:layout_height="47dp"
+            android:layout_height="wrap_content"
             android:text="视频标题"
             android:textSize="28sp"
             app:layout_constraintBottom_toBottomOf="parent"

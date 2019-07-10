@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.cyberclass2077_manager.adapter.CourseAdapter;
+import com.example.cyberclass2077_manager.adapter.CourseAdapter_next;
 import com.example.cyberclass2077_manager.bean.CourseBean;
 
 import java.util.ArrayList;
@@ -33,7 +34,7 @@ public class Fragment3CheckCourselistActivity extends AppCompatActivity {
             courseBeanList.add(new CourseBean());
         }
 
-        CourseAdapter courseAdapter=new CourseAdapter(Fragment3CheckCourselistActivity.this,courseBeanList);
+        CourseAdapter_next courseAdapter=new CourseAdapter_next(Fragment3CheckCourselistActivity.this,courseBeanList);
         listView_course.setAdapter(courseAdapter);
 
 

@@ -25,7 +25,7 @@ public class Fragment3CheckAccountlistActivity extends AppCompatActivity {
     void initWidget(){
         listView_followee = (ListView)findViewById(R.id.id_followee_list);
         List<UserListBean> userListBeansList = new ArrayList<>();
-        for(int i=0;i<3;i++)
+        for(int i=0;i<1;i++)
         {
             UserListBean userListBean=new UserListBean();
             userListBeansList.add(userListBean);

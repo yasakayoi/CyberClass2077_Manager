@@ -94,27 +94,27 @@ public class DynamicAdapter extends BaseAdapter {
             case 0:
                 viewHolderGroup.img_head.setImageResource(R.drawable.lee);
                 viewHolderGroup.str_user_name.setText("坦克人");
-                viewHolderGroup.img_dis.setImageResource(R.drawable.knn);
+                viewHolderGroup.img_dis.setImageResource(R.drawable.dyanamic1);
                 viewHolderGroup.str_describe.setText("冲冲冲");
-                viewHolderGroup.int_amount_favorite.setText("1,024 赞");
-                viewHolderGroup.str_time.setText("2019-07-10");
+                viewHolderGroup.int_amount_favorite.setText("0 赞");
+                viewHolderGroup.str_time.setText("2019-07-08");
                 break;
             case 1:
                 viewHolderGroup.img_head.setImageResource(R.drawable.lee);
                 viewHolderGroup.str_user_name.setText("坦克人");
-                viewHolderGroup.img_dis.setImageResource(R.drawable.male);
-                viewHolderGroup.str_describe.setText("冲冲冲");
-                viewHolderGroup.int_amount_favorite.setText("1,024 赞");
-                viewHolderGroup.str_time.setText("2019-07-10");
+                viewHolderGroup.img_dis.setImageResource(R.drawable.dyanamic2);
+                viewHolderGroup.str_describe.setText("回来了");
+                viewHolderGroup.int_amount_favorite.setText("5 赞");
+                viewHolderGroup.str_time.setText("2019-07-08");
                 break;
 
             case 2:
                 viewHolderGroup.img_head.setImageResource(R.drawable.lee);
                 viewHolderGroup.str_user_name.setText("坦克人");
-                viewHolderGroup.img_dis.setImageResource(R.drawable.male);
-                viewHolderGroup.str_describe.setText("冲冲冲");
-                viewHolderGroup.int_amount_favorite.setText("1,024 赞");
-                viewHolderGroup.str_time.setText("2019-07-10");
+                viewHolderGroup.img_dis.setImageResource(R.drawable.dyanamic3);
+                viewHolderGroup.str_describe.setText("好啊");
+                viewHolderGroup.int_amount_favorite.setText("2 赞");
+                viewHolderGroup.str_time.setText("2019-07-08");
                 break;
 
             default: break;
