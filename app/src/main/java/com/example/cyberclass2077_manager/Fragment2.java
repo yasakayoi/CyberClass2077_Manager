@@ -22,7 +22,7 @@ public class Fragment2 extends Fragment {
 
         ListView listView=view.findViewById(R.id.dyanamic_list);
         List<DynamicBean> dynamicBeanList=new ArrayList<>();
-        for(int i=0;i<10;i++)
+        for(int i=0;i<3;i++)
         {
             dynamicBeanList.add(new DynamicBean());
         }

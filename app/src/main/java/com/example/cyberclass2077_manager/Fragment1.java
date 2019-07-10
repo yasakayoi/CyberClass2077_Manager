@@ -44,7 +44,7 @@ public class Fragment1 extends Fragment {
         //初始化list
         ListView listView=view.findViewById(R.id.course_list);
         List<CourseBean> courseBeanList=new ArrayList<>();
-        for(int i=0;i<10;i++)
+        for(int i=0;i<3;i++)
         {
             courseBeanList.add(new CourseBean());
         }
